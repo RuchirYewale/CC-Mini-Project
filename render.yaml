@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cloud-portfolio
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
