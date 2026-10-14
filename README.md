@@ -1,8 +1,12 @@
-# Cloud Portfolio & Documentation Site
+# Cloud Portfolio & Documentation Site — Ruchir Yewale
 
-A sleek, modern, self-contained personal developer portfolio site built with responsive HTML5, CSS3, and Vanilla JavaScript (zero external dependencies). Designed to be hosted on **AWS S3 with Amazon CloudFront CDN** (for your Mini Project No. 2) or deployed in under 2 minutes on **Render**.
+A sleek, modern, self-contained personal developer portfolio site built with responsive HTML5, CSS3, and Vanilla JavaScript (zero external dependencies). Designed to be hosted on **AWS S3 with Amazon CloudFront CDN** (for Mini Project No. 2) or deployed in under 2 minutes on **Render**.
 
-Live Reference Style: [https://deokju33tvu1l.cloudfront.net](https://deokju33tvu1l.cloudfront.net)
+- **Student Name**: Ruchir Yewale
+- **Degree**: Computer Engineering Student
+- **Email**: ruchiryewale2@gmail.com
+- **LinkedIn**: [https://www.linkedin.com/in/ruchir-yewale-53ab56143/](https://www.linkedin.com/in/ruchir-yewale-53ab56143/)
+- **Live Reference Style**: [https://deokju33tvu1l.cloudfront.net](https://deokju33tvu1l.cloudfront.net)
 
 ---
 
@@ -20,15 +24,12 @@ Live Reference Style: [https://deokju33tvu1l.cloudfront.net](https://deokju33tvu
 
 ---
 
-## 🚀 Quick Customization
+## 🚀 Quick Preview & Customization
 
 Open `index.html` in your browser:
-1. Click the **"Customize My Info"** button in the top banner.
-2. Enter your Name, Branch/Degree, Email, GitHub, and LinkedIn.
-3. Click **"Save & Update Site"** (updates in real time and remembers across refreshes).
-4. Click **"Download Single index.html"** to get your fully personalized file ready for deployment!
-
-*Or edit lines directly in `index.html` with your code editor.*
+- You will see **Ruchir Yewale**'s portfolio loaded with your exact contact details and LinkedIn.
+- You can click **"Download Single index.html"** at any time to export the file.
+- If you ever need to adjust anything, click **"Edit Profile Info"** in the top banner.
 
 ---
 
@@ -37,25 +38,24 @@ Open `index.html` in your browser:
 Render provides free, fast static site hosting with automated SSL/HTTPS and global CDN.
 
 ### Steps:
-1. Push this project folder to a GitHub repository:
+1. Push this project folder to your GitHub:
    ```bash
-   git init
    git add .
-   git commit -m "Initial commit of cloud portfolio"
+   git commit -m "Update portfolio for Ruchir Yewale"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/cloud-portfolio.git
+   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/ruchir-portfolio.git
    git push -u origin main
    ```
 2. Go to [https://dashboard.render.com/](https://dashboard.render.com/) and sign in with GitHub.
 3. Click **"New +"** and choose **"Static Site"**.
-4. Select your `cloud-portfolio` repository.
+4. Select your `ruchir-portfolio` repository.
 5. Fill in the details:
-   - **Name**: `yourname-portfolio`
+   - **Name**: `ruchir-yewale-portfolio`
    - **Branch**: `main`
    - **Build Command**: *(leave blank)*
    - **Publish Directory**: `.` *(or `./`)*
 6. Click **"Create Static Site"**.
-7. Render will build and provide a live URL like `https://yourname-portfolio.onrender.com` with HTTPS enabled!
+7. Render will build and provide a live URL like `https://ruchir-yewale-portfolio.onrender.com` with HTTPS enabled!
 
 ---
 
@@ -66,15 +66,15 @@ Follow these exact steps to complete Mini Project No. 2:
 ### Step 1: Create an S3 Bucket
 1. Log in to [AWS Management Console](https://console.aws.amazon.com/) and open the **S3** service.
 2. Click **Create bucket**.
-3. Choose a globally unique bucket name (e.g. `yourname-portfolio-2026`).
-4. Select your preferred AWS Region (e.g. `ap-south-1` Mumbai or `us-east-1` N. Virginia).
+3. Choose a globally unique bucket name (e.g. `ruchir-portfolio-2026`).
+4. Select your AWS Region (e.g. `ap-south-1` Mumbai or `us-east-1` N. Virginia).
 5. Under **Block Public Access settings for this bucket**:
    - Uncheck **Block *all* public access**.
    - Check the acknowledgement box *"I understand that the bucket and objects will become public"*.
 6. Click **Create bucket**.
 
 ### Step 2: Upload Files
-1. Open your newly created bucket.
+1. Open your bucket `ruchir-portfolio-2026`.
 2. Click **Upload** -> **Add files** -> Select `index.html`.
 3. Click **Upload**.
 
@@ -84,12 +84,12 @@ Follow these exact steps to complete Mini Project No. 2:
 3. Choose **Enable**.
 4. In **Index document**, type `index.html`.
 5. Click **Save changes**.
-6. Copy the **Bucket website endpoint** (e.g., `http://yourname-portfolio-2026.s3-website.ap-south-1.amazonaws.com`).
+6. Copy the **Bucket website endpoint** (e.g., `http://ruchir-portfolio-2026.s3-website.ap-south-1.amazonaws.com`).
 
 ### Step 4: Add Bucket Policy (Make Objects Public)
 1. In your bucket, go to the **Permissions** tab.
 2. Scroll to **Bucket policy** and click **Edit**.
-3. Paste the following JSON (replace `yourname-portfolio-2026` with your bucket name):
+3. Paste the following JSON (replace `ruchir-portfolio-2026` with your exact bucket name):
    ```json
    {
      "Version": "2012-10-17",
@@ -99,7 +99,7 @@ Follow these exact steps to complete Mini Project No. 2:
          "Effect": "Allow",
          "Principal": "*",
          "Action": "s3:GetObject",
-         "Resource": "arn:aws:s3:::yourname-portfolio-2026/*"
+         "Resource": "arn:aws:s3:::ruchir-portfolio-2026/*"
        }
      ]
    }
